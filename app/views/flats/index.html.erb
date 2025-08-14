@@ -1,0 +1,18 @@
+<nav class='navbar p-3 bg-body-tertiary'>
+  <p class='h5 '> <%= link_to 'Simple Airbnb', flats_path, class: "text-decoration-none text-dark"%> </p>
+</nav>
+<div class='container'>
+  <h1>All our Flats (<%= Flat.count %>)</h1>
+  <div class='row'>
+      <% @flats.each do |flat| %>
+<div class="col-md-4">
+      <div class="card mb-4">
+        <div class="card-body">
+          <h5 class="card-title"><%= flat.name %></h5>
+          <h6></h6>
+        </div>
+      </div>
+    </div>
+      <% end %>
+  </div>
+</div>
